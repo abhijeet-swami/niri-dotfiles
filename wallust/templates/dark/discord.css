@@ -1,0 +1,189 @@
+@import url("https://refact0r.github.io/midnight-discord/build/midnight.css");
+
+:root {
+    --colors: on;
+
+    --bb-bg: {{background}};
+    --bb-panel: {{color0}};
+    --bb-instr: {{background}};
+    --bb-hover: {{color8}};
+    --bb-selected: {{color8}};
+    --bb-border: {{color2}};
+    --bb-fg: {{foreground}};
+    --bb-fg-bright: {{color15}};
+    --bb-teal: {{color6}};
+    --bb-teal-bright: {{color14}};
+    --bb-teal-deep: {{color6}};
+    --bb-red: {{color1}};
+    --bb-red-bright: {{color9}};
+    --bb-gold: {{color3}};
+    --bb-green: {{color2}};
+
+    --text-0: var(--bb-bg);
+    --text-1: var(--bb-fg);
+    --text-2: {{color3}};
+    --text-3: color-mix(in srgb, var(--bb-fg) 42%, var(--bb-border) 58%);
+    --text-4: color-mix(in srgb, var(--bb-fg) 28%, var(--bb-border) 72%);
+    --text-5: color-mix(in srgb, var(--bb-fg) 16%, var(--bb-border) 84%);
+
+    --bg-1: var(--bb-hover);
+    --bg-2: var(--bb-panel);
+    --bg-3: var(--bb-bg);
+    --bg-4: var(--bb-instr);
+
+    --hover: rgba({{color8_rgb}}, 0.55);
+    --active: rgba({{color6_rgb}}, 0.18);
+    --active-2: rgba({{color6_rgb}}, 0.24);
+    --message-hover: rgba({{color8_rgb}}, 0.28);
+
+    --accent-1: var(--bb-teal-bright);
+    --accent-2: var(--bb-teal);
+    --accent-3: {{color6}};
+    --accent-4: {{color6}};
+    --accent-5: {{color6}};
+    --accent-new: var(--bb-red);
+
+    --mention: linear-gradient(to right, rgba({{color6_rgb}}, 0.12) 0 4px, rgba({{color6_rgb}}, 0.06) 4px 100%);
+    --mention-hover: linear-gradient(to right, rgba({{color6_rgb}}, 0.18) 0 4px, rgba({{color6_rgb}}, 0.10) 4px 100%);
+    --reply: linear-gradient(to right, rgba({{color6_rgb}}, 0.10) 0 2px, transparent 2px 100%);
+    --reply-hover: linear-gradient(to right, rgba({{color6_rgb}}, 0.16) 0 2px, rgba({{color11_rgb}}, 0.02) 2px 100%);
+
+    --online: var(--bb-teal-deep);
+    --dnd: var(--bb-red);
+    --idle: var(--bb-gold);
+    --streaming: var(--bb-teal);
+    --offline: var(--bb-border);
+
+    --border-light: rgba({{color2_rgb}}, 0.10);
+    --border: rgba({{color2_rgb}}, 0.22);
+    --border-hover: rgba({{color6_rgb}}, 0.32);
+    --button-border: rgba({{color6_rgb}}, 0.16);
+
+    --red-1: {{color9}};
+    --red-2: {{color9}};
+    --red-3: {{color1}};
+    --red-4: {{color1}};
+    --red-5: {{color1}};
+
+    --green-1: {{color10}};
+    --green-2: {{color2}};
+    --green-3: {{color2}};
+    --green-4: {{color2}};
+    --green-5: {{color2}};
+
+    --blue-1: {{color14}};
+    --blue-2: {{color6}};
+    --blue-3: {{color6}};
+    --blue-4: {{color6}};
+    --blue-5: {{color6}};
+
+    --yellow-1: {{color15}};
+    --yellow-2: {{color11}};
+    --yellow-3: {{color3}};
+    --yellow-4: {{color3}};
+    --yellow-5: {{color3}};
+
+    --purple-1: {{color14}};
+    --purple-2: {{color6}};
+    --purple-3: {{color6}};
+    --purple-4: {{color6}};
+    --purple-5: {{color6}};
+
+    --background-primary: var(--bg-3);
+    --background-secondary: var(--bg-2);
+    --background-secondary-alt: var(--bg-1);
+    --background-tertiary: var(--bg-4);
+    --background-accent: var(--bg-1);
+    --background-floating: var(--bg-2);
+    --background-base-low: var(--bg-2);
+    --background-base-lower: var(--bg-3);
+    --background-base-lowest: {{color0}};
+    --bg-base-primary: var(--bg-3);
+    --bg-base-secondary: var(--bg-2);
+    --bg-base-tertiary: var(--bg-1);
+    --bg-surface-overlay: var(--bg-2);
+
+    --bg-overlay-1: rgba({{color0_rgb}}, 0.88);
+    --bg-overlay-2: rgba({{color0_rgb}}, 0.92);
+    --bg-overlay-3: rgba({{color0_rgb}}, 0.96);
+
+    --background-mentioned: var(--mention);
+    --background-mentioned-hover: var(--mention-hover);
+    --background-message-hover: var(--message-hover);
+
+    --channeltextarea-background: var(--bg-2);
+    --chat-background: var(--bg-3);
+
+    --scrollbar-auto-thumb: {{color8}};
+    --scrollbar-auto-track: transparent;
+
+    --text-normal: var(--text-1);
+    --text-muted: var(--text-3);
+    --text-link: var(--accent-1);
+
+    --interactive-normal: var(--text-2);
+    --interactive-hover: var(--bb-fg);
+    --interactive-active: var(--text-1);
+
+    --brand-500: var(--accent-2);
+    --brand-560: var(--accent-1);
+
+    --button-secondary-background: {{color8}};
+    --button-secondary-background-hover: {{color0}};
+    --button-danger-background: var(--bb-red);
+    --button-danger-background-hover: {{color9}};
+
+    --input-background: var(--bg-2);
+    --card-primary-bg: var(--bg-2);
+
+    --primary-600: var(--bg-3);
+    --primary-700: var(--bg-1);
+
+    --radius-xs: 0px;
+    --radius-sm: 0px;
+    --radius-md: 0px;
+    --radius-lg: 0px;
+}
+
+.theme-dark {
+    --background-primary: var(--bg-3);
+    --background-secondary: var(--bg-2);
+    --background-tertiary: var(--bg-4);
+}
+
+.message__5126c:hover {
+    background: var(--message-hover) !important;
+}
+
+.mentioned__5126c {
+    background: var(--mention) !important;
+}
+
+.lookFilled__201d5.colorBrand__201d5 {
+    background: var(--bb-teal) !important;
+    color: var(--bg-4) !important;
+}
+
+.lookFilled__201d5.colorBrand__201d5:hover {
+    background: var(--bb-teal-bright) !important;
+}
+
+:is([class*="reaction"]) {
+    background: rgba({{color6_rgb}}, 0.04) !important;
+}
+
+:is([class*="reaction"]):hover {
+    background: rgba({{color6_rgb}}, 0.08) !important;
+}
+
+:is([class*="reaction"][aria-pressed="true"]) {
+    background: var(--active) !important;
+}
+
+.theme-dark .spoilerMarkdownContent_a3d0f7 {
+    background: rgba({{color0_rgb}}, 0.92);
+}
+
+.theme-dark .spoilerMarkdownContent_a3d0f7.hidden_a3d0f7:hover {
+    background: rgba({{color6_rgb}}, 0.92);
+}

@@ -1,0 +1,45 @@
+theme[main_bg]=""
+theme[main_fg]="{{foreground | darken(0.7)}}"
+theme[title]="{{color4 | darken(0.3) | saturate(0.5)}}"
+theme[hi_fg]="{{color6 | darken(0.4) | saturate(0.5)}}"
+theme[selected_bg]="{{color4 | darken(0.3) | saturate(0.5)}}"
+theme[selected_fg]="#F8F8F8"
+theme[inactive_fg]="{{color8 | darken(0.4) | saturate(0.3)}}"
+theme[proc_misc]="{{color3 | darken(0.4) | saturate(0.5)}}"
+theme[cpu_box]="{{color8 | darken(0.4) | saturate(0.3)}}"
+theme[mem_box]="{{color8 | darken(0.4) | saturate(0.3)}}"
+theme[net_box]="{{color8 | darken(0.4) | saturate(0.3)}}"
+theme[proc_box]="{{color8 | darken(0.4) | saturate(0.3)}}"
+theme[div_line]="{{color8 | darken(0.4) | saturate(0.3)}}"
+
+theme[temp_start]="{{color6 | darken(0.4) | saturate(0.5)}}"
+theme[temp_mid]="{{color4 | darken(0.3) | saturate(0.5)}}"
+theme[temp_end]="{{color1 | darken(0.3) | saturate(0.5)}}"
+
+theme[cpu_start]="{{color6 | darken(0.4) | saturate(0.5)}}"
+theme[cpu_mid]="{{color4 | darken(0.3) | saturate(0.5)}}"
+theme[cpu_end]="{{color1 | darken(0.3) | saturate(0.5)}}"
+
+theme[free_start]="{{color6 | darken(0.4) | saturate(0.5)}}"
+theme[free_mid]=""
+theme[free_end]="{{color10 | darken(0.3) | saturate(0.5)}}"
+
+theme[cached_start]="{{color3 | darken(0.4) | saturate(0.5)}}"
+theme[cached_mid]=""
+theme[cached_end]="{{color11 | darken(0.3) | saturate(0.5)}}"
+
+theme[available_start]="{{color4 | darken(0.3) | saturate(0.5)}}"
+theme[available_mid]=""
+theme[available_end]="{{color12 | darken(0.3) | saturate(0.5)}}"
+
+theme[used_start]="{{color1 | darken(0.3) | saturate(0.5)}}"
+theme[used_mid]=""
+theme[used_end]="{{color9 | darken(0.3) | saturate(0.5)}}"
+
+theme[download_start]="{{color6 | darken(0.4) | saturate(0.5)}}"
+theme[download_mid]="{{color4 | darken(0.3) | saturate(0.5)}}"
+theme[download_end]="{{color3 | darken(0.4) | saturate(0.5)}}"
+
+theme[upload_start]="{{color6 | darken(0.4) | saturate(0.5)}}"
+theme[upload_mid]="{{color4 | darken(0.3) | saturate(0.5)}}"
+theme[upload_end]="{{color3 | darken(0.4) | saturate(0.5)}}"

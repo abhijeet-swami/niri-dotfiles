@@ -1,0 +1,25 @@
+backend = "fastresize"
+color_space = "lab"
+palette = "harddark"
+
+check_contrast = true
+
+[templates]
+
+kitty    = { src = 'dark/kitty.conf', dst = '~/.config/kitty/colors.conf' }
+waybar   = { src = 'dark/waybar.css', dst = '~/.config/waybar/colors.css' }
+gtk3     = { src = 'dark/gtk.css', dst = '~/.config/gtk-3.0/gtk.css' }
+gtk4     = { src = 'dark/gtk.css', dst = '~/.config/gtk-4.0/gtk.css' }
+rofi     = { src = 'dark/rofi.rasi', dst = '~/.config/rofi/colors/wallust.rasi' }
+mako     = { src = 'dark/mako', dst = '~/.config/mako/config' }
+neovim   = { src = 'dark/nvim/theme.lua', dst = '~/.config/nvim/lua/plugins/theme.lua' }
+btop     = { src = 'dark/btop.theme', dst = '~/.config/btop/themes/btop.theme' }
+cava     = { src = 'dark/cava.ini', dst = '~/.config/cava/themes/cava_theme' }
+discord  = { src = 'dark/discord.css', dst = '~/.config/vesktop/themes/vesktop.theme.css' }
+spotify  = { src = 'dark/spicetify.ini', dst = '~/.config/spicetify/Themes/wallust/color.ini' }
+hyprland = { src = 'dark/hyprland.conf', dst = '~/.config/hypr/colors.conf' }
+swayosd  = { src = 'dark/swayosd.css', dst = '~/.config/swayosd/colors.css' }
+yazi     = { src = 'dark/yazi.toml', dst = '~/.config/yazi/theme.toml' }
+firefox_content  = { src = 'dark/firefox/userContent.css', dst = '~/.config/mozilla/firefox/s8dpf378.default-release/chrome/userContent.css' }
+firefox_chrome  = { src = 'dark/firefox/userChrome.css', dst = '~/.config/mozilla/firefox/s8dpf378.default-release/chrome/userChrome.css' }
+starship = { src = 'dark/starship.toml', dst = '~/.config/starship.toml' }

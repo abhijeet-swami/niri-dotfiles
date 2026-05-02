@@ -1,0 +1,5 @@
+@define-color background-color #F8F8F8;
+@define-color border-color     {{color8  | darken(0.4) | saturate(0.3)}};
+@define-color label            {{foreground | darken(0.7)}};
+@define-color image            {{foreground | darken(0.7)}};
+@define-color progress         {{color6  | darken(0.4) | saturate(0.5)}};

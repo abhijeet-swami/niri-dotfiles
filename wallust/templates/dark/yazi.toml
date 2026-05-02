@@ -1,0 +1,64 @@
+[flavor]
+use = "wallust"
+
+[manager]
+cwd = { fg = "{{color4}}" }
+
+hovered = { fg = "{{background}}", bg = "{{color4}}", bold = true }
+preview_hovered = { underline = true }
+
+find_keyword = { fg = "{{color3}}", bold = true }
+find_position = { fg = "{{color5}}", bg = "reset", bold = true }
+
+marker_selected = { fg = "{{color2}}", bg = "{{color2}}" }
+marker_copied = { fg = "{{color3}}", bg = "{{color3}}" }
+marker_cut = { fg = "{{color1}}", bg = "{{color1}}" }
+
+tab_active = { fg = "{{background}}", bg = "{{color4}}" }
+tab_inactive = { fg = "{{foreground}}", bg = "{{color0}}" }
+
+border_symbol = "│"
+border_style = { fg = "{{color8}}" }
+
+[status]
+separator_open = ""
+separator_close = ""
+separator_style = { fg = "{{color0}}", bg = "{{color0}}" }
+
+mode_normal = { fg = "{{background}}", bg = "{{color4}}", bold = true }
+mode_select = { fg = "{{background}}", bg = "{{color2}}", bold = true }
+mode_unset = { fg = "{{background}}", bg = "{{color3}}", bold = true }
+
+progress_label = { fg = "{{foreground}}", bold = true }
+progress_normal = { fg = "{{color4}}", bg = "{{color0}}" }
+progress_error = { fg = "{{color1}}", bg = "{{color0}}" }
+
+permissions_t = { fg = "{{color4}}" }
+permissions_r = { fg = "{{color3}}" }
+permissions_w = { fg = "{{color1}}" }
+permissions_x = { fg = "{{color2}}" }
+permissions_s = { fg = "{{color8}}" }
+
+[input]
+border = { fg = "{{color4}}" }
+title = { fg = "{{color4}}" }
+value = { fg = "{{foreground}}" }
+selected = { reversed = true }
+
+[completion]
+border = { fg = "{{color4}}" }
+active = { bg = "{{color0}}" }
+inactive = { bg = "reset" }
+
+[tasks]
+border = { fg = "{{color4}}" }
+title = { fg = "{{color4}}" }
+hovered = { underline = true }
+
+[which]
+mask = { bg = "{{color0}}" }
+cand = { fg = "{{color6}}" }
+rest = { fg = "{{color8}}" }
+desc = { fg = "{{color5}}" }
+separator = "  "
+separator_style = { fg = "{{color8}}" }

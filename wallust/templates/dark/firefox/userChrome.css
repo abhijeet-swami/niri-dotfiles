@@ -1,0 +1,180 @@
+:root {
+  --bg:           {{background}};
+  --bg-surface:   color-mix(in srgb, {{background}} 88%, {{foreground}});
+  --bg-surface-2: color-mix(in srgb, {{background}} 78%, {{foreground}});
+  --fg:           {{foreground}};
+  --fg-muted:     color-mix(in srgb, {{foreground}} 55%, {{background}});
+  --fg-subtle:    color-mix(in srgb, {{foreground}} 30%, {{background}});
+  --accent:       {{color4}};
+  --red:          {{color1}};
+  --yellow:       {{color3}};
+  --green:        {{color2}};
+  --cyan:         {{color6}};
+  --magenta:      {{color5}};
+}
+
+/* ── Base16 aliases (kept for any downstream refs) ─── */
+:root {
+  --base00: var(--bg);
+  --base01: var(--bg-surface);
+  --base02: var(--bg-surface-2);
+  --base03: var(--fg-subtle);
+  --base04: var(--fg-muted);
+  --base05: var(--fg);
+  --base0D: var(--accent);
+  --base08: var(--red);
+  --base09: var(--yellow);
+  --base0A: {{color11}};
+  --base0B: var(--green);
+  --base0C: var(--cyan);
+  --base0E: var(--magenta);
+  --base0F: {{color9}};
+}
+
+/* ── Firefox theme vars ───────────────────────────── */
+:root {
+  --panel-separator-zap-gradient: linear-gradient(
+    90deg, var(--base0E) 0%, var(--base0F) 52.08%, var(--base0A) 100%
+  ) !important;
+  --toolbar-bgcolor:                      var(--bg-surface) !important;
+  --tabs-border-color:                    var(--bg-surface) !important;
+  --lwt-sidebar-background-color:         var(--bg) !important;
+  --lwt-toolbar-field-focus:              var(--bg-surface) !important;
+  --toolbarbutton-border-radius:          6px !important;
+  --toolbarbutton-icon-fill:              var(--fg-muted) !important;
+  --urlbarView-separator-color:           var(--bg-surface) !important;
+  --urlbar-box-bgcolor:                   var(--bg-surface) !important;
+  --arrowpanel-background:                var(--bg-surface) !important;
+  --arrowpanel-border-color:              var(--bg) !important;
+  --color-accent-primary:                 var(--accent) !important;
+  --color-accent-primary-hover:           var(--accent) !important;
+  --color-accent-primary-active:          var(--accent) !important;
+  --focus-outline-color:                  var(--bg) !important;
+  --icon-color-critical:                  var(--red) !important;
+  --icon-color-information:               var(--accent) !important;
+  --icon-color-success:                   var(--green) !important;
+  --icon-color-warning:                   var(--yellow) !important;
+  --outline-color-error:                  var(--red) !important;
+  --text-color-error:                     var(--red) !important;
+  --tab-block-margin:                     0 !important;
+  --tab-border-radius:                    0 !important;
+  --toolbar-field-border-color:           var(--bg) !important;
+  --toolbar-field-focus-background-color: var(--bg-surface-2) !important;
+  --toolbar-field-focus-border-color:     var(--bg) !important;
+  --in-content-page-background:          var(--bg-surface) !important;
+  --input-text-background-color:          var(--bg-surface-2) !important;
+}
+
+/* ── Toolbox ──────────────────────────────────────── */
+#navigator-toolbox {
+  background-color: var(--bg) !important;
+  border: none !important;
+}
+
+/* ── Tabs ─────────────────────────────────────────── */
+#tabbrowser-tabs:not([movingtab])
+  > #tabbrowser-arrowscrollbox
+  > .tabbrowser-tab
+  > .tab-stack
+  > .tab-background[multiselected="true"],
+#tabbrowser-tabs:not([movingtab])
+  > #tabbrowser-arrowscrollbox
+  > .tabbrowser-tab
+  > .tab-stack
+  > .tab-background[selected="true"] {
+  background-image: none !important;
+  background-color: var(--toolbar-bgcolor) !important;
+}
+
+.tab-background {
+  border-radius: 6px !important;
+  border: 0px solid rgba(0, 0, 0, 0) !important;
+}
+
+.tab-background[selected] {
+  background-color: var(--bg-surface-2) !important;
+}
+
+#tabbrowser-tabs {
+  margin-left: 1px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+.tabbrowser-tab[last-visible-tab="true"] {
+  border: 0px solid rgba(0, 0, 0, 0) !important;
+}
+
+/* ── URL bar ──────────────────────────────────────── */
+#urlbar-input {
+  accent-color: var(--accent) !important;
+  color: var(--fg) !important;
+}
+
+#urlbar-input-container {
+  background-color: var(--bg-surface) !important;
+  border: 0px solid rgba(0, 0, 0, 0) !important;
+}
+
+#urlbar-background {
+  border-radius: 6px !important;
+}
+
+#urlbar[focused="true"] > #urlbar-background {
+  box-shadow: none !important;
+}
+
+.urlbarView-url {
+  color: var(--fg) !important;
+}
+
+.urlbar-input::placeholder,
+.searchbar-textbox::placeholder {
+  opacity: 1;
+  color: var(--fg-subtle) !important;
+}
+
+/* ── Buttons ──────────────────────────────────────── */
+toolbarbutton {
+  border-radius: 6px !important;
+}
+
+#star-button {
+  --toolbarbutton-icon-fill-attention: var(--accent) !important;
+}
+
+/* ── Sidebar ──────────────────────────────────────── */
+#sidebar-box,
+.sidebar-placesTree {
+  background-color: var(--bg) !important;
+}
+
+/* ── Vertical tabs / sidebar tools ───────────────── */
+#vertical-tabs.customization-target {
+  background-color: var(--bg) !important;
+}
+
+splitter#sidebar-tools-and-extensions-splitter {
+  display: none !important;
+}
+
+.tools-and-extensions[aria-orientation="vertical"],
+.tools-and-extensions.actions-list {
+  background-color: var(--bg) !important;
+}
+
+/* ── Icons ────────────────────────────────────────── */
+#identity-box,
+#trust-icon-container,
+#tracking-protection-icon-container {
+  fill: var(--fg-muted) !important;
+}
+
+/* ── New tab cleanup ──────────────────────────────── */
+.logo-and-wordmark {
+  display: none !important;
+}
+
+.search-inner-wrapper {
+  margin-top: 10% !important;
+}

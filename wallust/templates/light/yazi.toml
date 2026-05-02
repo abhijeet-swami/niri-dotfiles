@@ -1,0 +1,64 @@
+[flavor]
+use = "wallust"
+
+[manager]
+cwd = { fg = "{{color4 | darken(0.3) | saturate(0.5)}}" }
+
+hovered         = { fg = "#F8F8F8", bg = "{{color4 | darken(0.3) | saturate(0.5)}}", bold = true }
+preview_hovered = { underline = true }
+
+find_keyword  = { fg = "{{color3  | darken(0.4) | saturate(0.5)}}", bold = true }
+find_position = { fg = "{{color5  | darken(0.3) | saturate(0.5)}}", bg = "reset", bold = true }
+
+marker_selected = { fg = "{{color2 | darken(0.3) | saturate(0.5)}}", bg = "{{color2 | darken(0.3) | saturate(0.5)}}" }
+marker_copied   = { fg = "{{color3 | darken(0.4) | saturate(0.5)}}", bg = "{{color3 | darken(0.4) | saturate(0.5)}}" }
+marker_cut      = { fg = "{{color1 | darken(0.3) | saturate(0.5)}}", bg = "{{color1 | darken(0.3) | saturate(0.5)}}" }
+
+tab_active   = { fg = "#F8F8F8",                               bg = "{{color4 | darken(0.3) | saturate(0.5)}}" }
+tab_inactive = { fg = "{{foreground | darken(0.7)}}",          bg = "{{color7 | lighten(0.1)}}" }
+
+border_symbol = "│"
+border_style  = { fg = "{{color8 | darken(0.4) | saturate(0.3)}}" }
+
+[status]
+separator_open  = ""
+separator_close = ""
+separator_style = { fg = "{{color7 | lighten(0.1)}}", bg = "{{color7 | lighten(0.1)}}" }
+
+mode_normal = { fg = "#F8F8F8", bg = "{{color4 | darken(0.3) | saturate(0.5)}}", bold = true }
+mode_select = { fg = "#F8F8F8", bg = "{{color2 | darken(0.3) | saturate(0.5)}}", bold = true }
+mode_unset  = { fg = "#F8F8F8", bg = "{{color3 | darken(0.4) | saturate(0.5)}}", bold = true }
+
+progress_label  = { fg = "{{foreground | darken(0.7)}}", bold = true }
+progress_normal = { fg = "{{color4 | darken(0.3) | saturate(0.5)}}", bg = "{{color7 | lighten(0.1)}}" }
+progress_error  = { fg = "{{color1 | darken(0.3) | saturate(0.5)}}", bg = "{{color7 | lighten(0.1)}}" }
+
+permissions_t = { fg = "{{color4 | darken(0.3) | saturate(0.5)}}" }
+permissions_r = { fg = "{{color3 | darken(0.4) | saturate(0.5)}}" }
+permissions_w = { fg = "{{color1 | darken(0.3) | saturate(0.5)}}" }
+permissions_x = { fg = "{{color2 | darken(0.3) | saturate(0.5)}}" }
+permissions_s = { fg = "{{color8 | darken(0.4) | saturate(0.3)}}" }
+
+[input]
+border   = { fg = "{{color4 | darken(0.3) | saturate(0.5)}}" }
+title    = { fg = "{{color4 | darken(0.3) | saturate(0.5)}}" }
+value    = { fg = "{{foreground | darken(0.7)}}" }
+selected = { reversed = true }
+
+[completion]
+border   = { fg = "{{color4 | darken(0.3) | saturate(0.5)}}" }
+active   = { bg = "{{color7 | lighten(0.1)}}" }
+inactive = { bg = "reset" }
+
+[tasks]
+border  = { fg = "{{color4 | darken(0.3) | saturate(0.5)}}" }
+title   = { fg = "{{color4 | darken(0.3) | saturate(0.5)}}" }
+hovered = { underline = true }
+
+[which]
+mask      = { bg = "{{color7 | lighten(0.1)}}" }
+cand      = { fg = "{{color6 | darken(0.4) | saturate(0.5)}}" }
+rest      = { fg = "{{color8 | darken(0.4) | saturate(0.3)}}" }
+desc      = { fg = "{{color5 | darken(0.3) | saturate(0.5)}}" }
+separator = "  "
+separator_style = { fg = "{{color8 | darken(0.4) | saturate(0.3)}}" }

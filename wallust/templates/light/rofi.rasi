@@ -1,0 +1,9 @@
+* {
+    background:     #F8F8F899;
+    background-alt: {{color7 | lighten(0.1)}};
+    foreground:     {{foreground | darken(0.7)}};
+    selected:       {{color4 | darken(0.3) | saturate(0.5)}};
+    border:         {{color12 | darken(0.3) | saturate(0.5)}};
+    active:         {{color2 | darken(0.3) | saturate(0.5)}};
+    urgent:         {{color1 | darken(0.3) | saturate(0.5)}};
+}
