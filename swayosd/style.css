@@ -1,0 +1,40 @@
+@import "./colors.css";
+
+window {
+  background-color: transparent;
+}
+
+.osd,
+#osd,
+osd {
+  background-color: alpha(@background-color, 1);
+  border: 2px solid @border-color;
+  border-radius: 10px;
+  box-shadow: none; 
+}
+
+image {
+  color: @image;
+  -gtk-icon-size: 30px;
+  margin: 0 16px 0 0;
+}
+
+label {
+  color: @label;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 0;
+}
+
+progressbar {
+  /* min-height: 16px; */
+  min-width: 200px;
+}
+
+progressbar trough {
+  background: alpha(@border-color, 0.3);
+}
+
+progressbar progress {
+  background: linear-gradient(90deg, @progress, alpha(@progress, 0.7));
+}
