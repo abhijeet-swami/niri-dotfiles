@@ -1,0 +1,34 @@
+window-rule {
+    match app-id="scratchpad"
+    open-floating true
+    default-column-width { fixed 900; }
+    default-window-height { fixed 500; }
+    open-focused true
+}
+// window-rule {
+//     background-effect {
+//         blur false
+//     }
+// }
+// layer-rule {
+//     match namespace="^rofi$"
+//     match namespace="^swayosd$"
+//     opacity 1.0
+//     background-effect {
+//         blur false
+//         xray false
+//     }
+// }
+window-rule {
+    geometry-corner-radius 0
+    clip-to-geometry true
+    draw-border-with-background false
+}
+// window-rule {
+//     match is-active=false
+//     opacity 0.92
+// }
+window-rule {
+    match app-id="^firefox$"
+    default-column-width { proportion 1.0; }
+}

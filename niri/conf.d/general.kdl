@@ -1,0 +1,7 @@
+prefer-no-csd
+screenshot-path "~/Pictures/Screenshots/%Y-%m-%d %H-%M-%S.png"
+
+output "eDP-1" {
+    mode "1920x1080@60.024"
+    scale 1
+}

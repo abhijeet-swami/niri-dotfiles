@@ -1,0 +1,11 @@
+overview {
+    backdrop-color "#1E1E2E"
+    workspace-shadow {
+        off
+    }
+}
+
+layer-rule {
+    match namespace="^awww-daemon$"
+    place-within-backdrop true
+}

@@ -1,0 +1,134 @@
+binds {
+    MOD+GRAVE hotkey-overlay-title="Scratchpad Terminal" { spawn-sh "$HOME/.config/bin/scratchpad.sh"; }
+
+    MOD+SHIFT+K { show-hotkey-overlay; }
+
+    MOD+ESCAPE hotkey-overlay-title="Open Overview" repeat=false { toggle-overview; }
+    MOD+SHIFT+ESCAPE hotkey-overlay-title="Power Menu" repeat=false { spawn-sh "/home/abhijeet/.config/bin/powermenu.sh"; }
+    Mod+F2 hotkey-overlay-title="Performance Menu" repeat=false { spawn-sh "/home/abhijeet/.config/bin/performance-menu.sh"; }
+
+    MOD+RETURN hotkey-overlay-title="Open Terminal: kitty" { spawn-sh "kitty"; }
+    MOD+SHIFT+Q hotkey-overlay-title="Lock Screen: hyprlock" { spawn-sh "hyprlock"; }
+
+    MOD+SPACE hotkey-overlay-title="Open App Launcher: rofi" { spawn-sh "rofi -show drun -theme ~/.config/rofi/menu.rasi"; }
+
+    MOD+SHIFT+B hotkey-overlay-title="Open Browser" { spawn-sh "firefox"; }
+    MOD+SHIFT+ALT+B hotkey-overlay-title="Open Browser (Private)" { spawn-sh "firefox --private-window"; }
+
+    MOD+SHIFT+A hotkey-overlay-title="ChatGPT" {
+        spawn-sh "~/.config/bin/web-app.sh https://chat.openai.com chatgpt";
+    }
+    MOD+SHIFT+ALT+G hotkey-overlay-title="WhatsApp Web" {
+        spawn-sh "~/.config/bin/web-app.sh https://web.whatsapp.com whatsapp";
+    }
+    MOD+SHIFT+Y hotkey-overlay-title="YouTube" {
+        spawn-sh "~/.config/bin/web-app.sh https://youtube.com youtube";
+    }
+    MOD+SHIFT+T hotkey-overlay-title="TUF" {
+        spawn-sh "~/.config/bin/web-app.sh https://takeuforward.org/dsa/strivers-sde-sheet-top-coding-interview-problems";
+    }
+
+    MOD+SHIFT+G hotkey-overlay-title="Telegram" { spawn-sh "Telegram"; }
+    MOD+SHIFT+D hotkey-overlay-title="Vesktop" { spawn-sh "vesktop"; }
+    Mod+Shift+N hotkey-overlay-title="Neovim" { spawn-sh "kitty -e nvim"; }
+    Mod+Shift+F hotkey-overlay-title="Nautilus" { spawn "nautilus" "--new-window"; }
+    MOD+SHIFT+M hotkey-overlay-title="Spotify" { spawn-sh "spotify-launcher"; }
+
+    MOD+ALT+SHIFT+F hotkey-overlay-title="File Manager: Yazi" { spawn-sh "kitty -e yazi"; }
+
+    MOD+CTRL+SHIFT+SPACE hotkey-overlay-title="Wallpaper Selector" { spawn-sh "$HOME/.config/bin/bgselector.sh"; }
+
+    XF86AudioNext allow-when-locked=true { spawn-sh "playerctl next"; }
+    XF86AudioPrev allow-when-locked=true { spawn-sh "playerctl previous"; }
+    XF86AudioPause allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+    XF86AudioPlay allow-when-locked=true { spawn-sh "playerctl play-pause"; }
+
+    XF86AudioMute allow-when-locked=true { spawn "swayosd-client" "--output-volume" "mute-toggle"; }
+    XF86AudioMicMute allow-when-locked=true { spawn "swayosd-client" "--input-volume" "mute-toggle"; }
+    XF86AudioRaiseVolume allow-when-locked=true { spawn "swayosd-client" "--output-volume" "raise"; }
+    XF86AudioLowerVolume allow-when-locked=true { spawn "swayosd-client" "--output-volume" "lower"; }
+    XF86MonBrightnessUp allow-when-locked=true { spawn "swayosd-client" "--brightness" "raise"; }
+    XF86MonBrightnessDown allow-when-locked=true { spawn "swayosd-client" "--brightness" "lower"; }
+
+    MOD+W { close-window; }
+
+    MOD+LEFT { focus-column-left; }
+    MOD+DOWN { focus-window-down; }
+    MOD+UP { focus-window-up; }
+    MOD+RIGHT { focus-column-right; }
+
+    MOD+SHIFT+LEFT { move-column-left; }
+    MOD+SHIFT+DOWN { move-window-down; }
+    MOD+SHIFT+UP { move-window-up; }
+    MOD+SHIFT+RIGHT { move-column-right; }
+
+    MOD+SHIFT+HOME { move-column-to-first; }
+    MOD+SHIFT+END { move-column-to-last; }
+
+    MOD+HOME { focus-column-first; }
+    MOD+END { focus-column-last; }
+
+    MOD+CTRL+LEFT { focus-monitor-left; }
+    MOD+CTRL+RIGHT { focus-monitor-right; }
+    MOD+CTRL+UP { focus-monitor-up; }
+    MOD+CTRL+DOWN { focus-monitor-down; }
+
+    MOD+SHIFT+CTRL+LEFT { move-column-to-monitor-left; }
+    MOD+SHIFT+CTRL+RIGHT { move-column-to-monitor-right; }
+    MOD+SHIFT+CTRL+UP { move-column-to-monitor-up; }
+    MOD+SHIFT+CTRL+DOWN { move-column-to-monitor-down; }
+
+    MOD+WHEELSCROLLDOWN cooldown-ms=100 { focus-workspace-down; }
+    MOD+WHEELSCROLLUP cooldown-ms=100 { focus-workspace-up; }
+
+    MOD+SHIFT+WHEELSCROLLDOWN cooldown-ms=100 { move-column-to-workspace-down; }
+    MOD+SHIFT+WHEELSCROLLUP cooldown-ms=100 { move-column-to-workspace-up; }
+
+    MOD+WHEELSCROLLRIGHT { focus-column-right; }
+    MOD+WHEELSCROLLLEFT { focus-column-left; }
+    MOD+CTRL+WHEELSCROLLRIGHT { move-column-right; }
+    MOD+CTRL+WHEELSCROLLLEFT { move-column-left; }
+
+    MOD+1 { focus-workspace 1; }
+    MOD+2 { focus-workspace 2; }
+    MOD+3 { focus-workspace 3; }
+    MOD+4 { focus-workspace 4; }
+    MOD+5 { focus-workspace 5; }
+    MOD+6 { focus-workspace 6; }
+    MOD+7 { focus-workspace 7; }
+    MOD+8 { focus-workspace 8; }
+    MOD+9 { focus-workspace 9; }
+
+    MOD+SHIFT+1 { move-column-to-workspace 1; }
+    MOD+SHIFT+2 { move-column-to-workspace 2; }
+    MOD+SHIFT+3 { move-column-to-workspace 3; }
+    MOD+SHIFT+4 { move-column-to-workspace 4; }
+    MOD+SHIFT+5 { move-column-to-workspace 5; }
+    MOD+SHIFT+6 { move-column-to-workspace 6; }
+    MOD+SHIFT+7 { move-column-to-workspace 7; }
+    MOD+SHIFT+8 { move-column-to-workspace 8; }
+    MOD+SHIFT+9 { move-column-to-workspace 9; }
+
+    MOD+TAB { focus-workspace-previous; }
+
+    MOD+C { center-column; }
+    MOD+CTRL+C { center-visible-columns; }
+    MOD+BRACKETLEFT { set-column-width "-10%"; }
+    MOD+BRACKETRIGHT { set-column-width "+10%"; }
+    MOD+SHIFT+BRACKETLEFT { set-window-height "-10%"; }
+    MOD+SHIFT+BRACKETRIGHT { set-window-height "+10%"; }
+
+    MOD+CTRL+WHEELSCROLLDOWN { set-window-height "-5%"; }
+    MOD+CTRL+WHEELSCROLLUP { set-window-height "+5%"; }
+
+    MOD+T { toggle-window-floating; }
+    MOD+F { fullscreen-window; }
+    MOD+M { maximize-column; }
+
+    MOD+S { screenshot; }
+    MOD+SHIFT+S { screenshot-screen write-to-disk=true; }
+    MOD+CTRL+S { screenshot-window write-to-disk=true; }
+    MOD+P { spawn-sh "pgrep -x hyprpicker >/dev/null || hyprpicker"; }
+
+    MOD+CTRL+SPACE { spawn "sh" "-c" "pgrep -x waybar >/dev/null && killall waybar || waybar &"; }
+}
