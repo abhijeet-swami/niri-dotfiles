@@ -1,0 +1,69 @@
+[manager]
+keymap = [
+  { on = "<Esc>", run = "escape", desc = "Exit visual mode / clear selection" },
+  { on = "q", run = "quit", desc = "Quit" },
+  { on = "Q", run = "quit --no-cwd-file", desc = "Quit without cwd file" },
+
+  { on = "k", run = "arrow -1", desc = "Move up" },
+  { on = "j", run = "arrow 1", desc = "Move down" },
+  { on = "K", run = "arrow -5", desc = "Move up 5" },
+  { on = "J", run = "arrow 5", desc = "Move down 5" },
+  { on = "h", run = "leave", desc = "Go to parent" },
+  { on = "l", run = "enter", desc = "Enter directory" },
+  { on = "<Enter>", run = "open", desc = "Open file" },
+  { on = "<Space>", run = "select --state=none", desc = "Toggle selection" },
+
+  { on = "g", run = "arrow -99999999", desc = "Go to top" },
+  { on = "G", run = "arrow 99999999", desc = "Go to bottom" },
+
+  { on = "d", run = "trash", desc = "Trash file" },
+  { on = "D", run = "remove", desc = "Permanently delete" },
+  { on = "a", run = "create", desc = "Create file/dir" },
+  { on = "r", run = "rename --cursor=before_ext", desc = "Rename" },
+  { on = "y", run = "yank", desc = "Yank (copy)" },
+  { on = "x", run = "yank --cut", desc = "Cut" },
+  { on = "p", run = "paste", desc = "Paste" },
+  { on = "P", run = "paste --force", desc = "Paste (overwrite)" },
+
+  { on = ".", run = "hidden toggle", desc = "Toggle hidden files" },
+  { on = "/", run = "find --smart", desc = "Find" },
+  { on = "n", run = "find_arrow", desc = "Next match" },
+  { on = "N", run = "find_arrow --previous", desc = "Previous match" },
+  { on = "s", run = "sort modified --reverse", desc = "Sort by modified" },
+  { on = "S", run = "sort natural --reverse=no", desc = "Sort natural" },
+
+  { on = "z", run = "plugin fzf", desc = "Jump with fzf" },
+  { on = "f", run = "filter --smart", desc = "Filter" },
+
+  { on = "<Tab>", run = "tab_switch 1 --relative", desc = "Next tab" },
+  { on = "<S-Tab>", run = "tab_switch -1 --relative", desc = "Prev tab" },
+  { on = "t", run = "tab_create --current", desc = "New tab" },
+  { on = "w", run = "tab_close", desc = "Close tab" },
+
+  { on = "<F5>", run = "refresh", desc = "Refresh" },
+]
+
+[input]
+keymap = [
+  { on = "<Enter>", run = "close --submit", desc = "Submit" },
+  { on = "<Esc>", run = "close", desc = "Cancel" },
+  { on = "<C-c>", run = "close", desc = "Cancel" },
+  { on = "k", run = "move -1", desc = "Move up" },
+  { on = "j", run = "move 1", desc = "Move down" },
+  { on = "<Left>", run = "backward", desc = "Move left" },
+  { on = "<Right>", run = "forward", desc = "Move right" },
+  { on = "<C-a>", run = "move -999", desc = "Start of line" },
+  { on = "<C-e>", run = "move 999", desc = "End of line" },
+  { on = "<Backspace>", run = "backspace", desc = "Delete back" },
+  { on = "<C-u>", run = "kill bol", desc = "Kill to start" },
+  { on = "<C-k>", run = "kill eol", desc = "Kill to end" },
+  { on = "<C-w>", run = "kill backward", desc = "Kill word back" },
+]
+
+[select]
+keymap = [
+  { on = "<Esc>", run = "close", desc = "Cancel" },
+  { on = "<Enter>", run = "close --submit", desc = "Submit" },
+  { on = "k", run = "arrow -1", desc = "Up" },
+  { on = "j", run = "arrow 1", desc = "Down" },
+]

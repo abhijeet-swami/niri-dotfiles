@@ -1,0 +1,64 @@
+[flavor]
+use = "wallust"
+
+[manager]
+cwd = { fg = "#F49641" }
+
+hovered = { fg = "#050804", bg = "#F49641", bold = true }
+preview_hovered = { underline = true }
+
+find_keyword = { fg = "#6B8A05", bold = true }
+find_position = { fg = "#BBBDA5", bg = "reset", bold = true }
+
+marker_selected = { fg = "#787A78", bg = "#787A78" }
+marker_copied = { fg = "#6B8A05", bg = "#6B8A05" }
+marker_cut = { fg = "#484E44", bg = "#484E44" }
+
+tab_active = { fg = "#050804", bg = "#F49641" }
+tab_inactive = { fg = "#ACAFAA", bg = "#524C2F" }
+
+border_symbol = "│"
+border_style = { fg = "#5A5C58" }
+
+[status]
+separator_open = ""
+separator_close = ""
+separator_style = { fg = "#524C2F", bg = "#524C2F" }
+
+mode_normal = { fg = "#050804", bg = "#F49641", bold = true }
+mode_select = { fg = "#050804", bg = "#787A78", bold = true }
+mode_unset = { fg = "#050804", bg = "#6B8A05", bold = true }
+
+progress_label = { fg = "#ACAFAA", bold = true }
+progress_normal = { fg = "#F49641", bg = "#524C2F" }
+progress_error = { fg = "#484E44", bg = "#524C2F" }
+
+permissions_t = { fg = "#F49641" }
+permissions_r = { fg = "#6B8A05" }
+permissions_w = { fg = "#484E44" }
+permissions_x = { fg = "#787A78" }
+permissions_s = { fg = "#5A5C58" }
+
+[input]
+border = { fg = "#F49641" }
+title = { fg = "#F49641" }
+value = { fg = "#ACAFAA" }
+selected = { reversed = true }
+
+[completion]
+border = { fg = "#F49641" }
+active = { bg = "#524C2F" }
+inactive = { bg = "reset" }
+
+[tasks]
+border = { fg = "#F49641" }
+title = { fg = "#F49641" }
+hovered = { underline = true }
+
+[which]
+mask = { bg = "#524C2F" }
+cand = { fg = "#FFEC00" }
+rest = { fg = "#5A5C58" }
+desc = { fg = "#BBBDA5" }
+separator = "  "
+separator_style = { fg = "#5A5C58" }
