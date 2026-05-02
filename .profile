@@ -1,0 +1,2 @@
+export GTK_THEME=adw-gtk3:dark
+export GTK_APPLICATION_PREFER_DARK_THEME=1
