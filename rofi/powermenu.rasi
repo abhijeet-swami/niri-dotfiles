@@ -1,0 +1,96 @@
+@import "~/.config/rofi/colors/wallust.rasi"
+
+configuration {
+    kb-cancel:       "Escape,MouseSecondary";
+    hover-select:    true;
+    scroll-method:   0;
+    me-select-entry: "";
+    me-accept-entry: "MousePrimary";
+    click-to-exit:   true;
+    cycle:           true;
+}
+
+* {
+    font:             "JetBrainsMono Nerd Font 13";
+    background-color: transparent;
+    text-color:       @foreground;
+    margin:           0;
+    padding:          0;
+    spacing:          0;
+}
+
+window {
+    background-color: @background;
+    border:           1px;
+    border-color:     @selected;
+    border-radius:    14px;
+    width:            260px;
+    transparency:     "real";
+    location:         center;
+    anchor:           center;
+}
+
+mainbox {
+    background-color: @background;
+    spacing:          0px;
+    children:         [ listview ];
+}
+
+listview {
+    columns:          1;
+    lines:            4;
+    fixed-height:     true;
+    fixed-columns:    true;
+    cycle:            true;
+    scrollbar:        false;
+    spacing:          0px;
+    padding:          8px 0px;
+    background-color: @background;
+    border-radius:    0px 0px 13px 13px;
+}
+
+element {
+    padding:          14px 22px;
+    spacing:          0px;
+    cursor:           pointer;
+    background-color: transparent;
+    border:           0px;
+    border-radius:    0px;
+    orientation:      horizontal;
+    children:         [ element-text ];
+}
+
+element normal.normal {
+    background-color: transparent;
+    text-color:       @background-alt;
+}
+
+element alternate.normal {
+    background-color: transparent;
+    text-color:       @background-alt;
+}
+
+element selected.normal {
+    background-color: rgba(255,255,255,0.08);
+    text-color:       @foreground;
+    border:           0px 0px 0px 2px;
+    border-color:     @selected;
+}
+
+element-text {
+    cursor:           inherit;
+    vertical-align:   0.5;
+    horizontal-align: 0.0;
+    background-color: transparent;
+    text-color:       inherit;
+    font:             "JetBrainsMono Nerd Font 13";
+}
+
+error-message {
+    padding:          20px;
+    background-color: @background;
+    text-color:       @foreground;
+    border:           1px;
+    border-color:     @selected;
+    border-radius:    14px;
+}
